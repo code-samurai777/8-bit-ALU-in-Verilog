@@ -2,14 +2,29 @@
 
 ## Project Overview
 
-This project implements an **8-bit Arithmetic Logic Unit (ALU)** in Verilog, designed in a **modular and professional style** suitable for digital design learning, simulation, and portfolio demonstration. The ALU supports a variety of **arithmetic, logical, and shift operations** and includes a **control unit** to emulate CPU-style operation selection.  
+This project implements an **8-bit Arithmetic Logic Unit (ALU)** in Verilog. It has a modular design, with separate modules for arithmetic, logic, shift operations, and control. It includes a **control unit** to emulate CPU-style operation selection.  
 
-This project is built to be **interview-ready** and demonstrates:
-- Modular Verilog design
-- Status flags (Zero, Carry, Overflow, Negative)
-- ALU control logic
-- Testbench-driven simulation with waveform support
-- Documentation and block diagrams for clarity
+The ALU supports:
+
+Arithmetic operations: add, subtract, increment, decrement
+
+Logical operations: AND, OR, XOR, NOT
+
+Shift operations: logical and arithmetic shifts
+
+Status flags: Zero, Carry, Overflow, Negative
+
+A testbench runs all operations and generates waveform outputs for verification.
+
+Tools used:
+
+EDA Playground – for writing and simulating Verilog code
+
+Icarus Verilog – Verilog compiler and simulator
+
+GTKWave – waveform visualization
+
+The project also includes block diagrams and an opcode table for reference.
 
 ---
 

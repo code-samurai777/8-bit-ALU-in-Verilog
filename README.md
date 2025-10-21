@@ -4,25 +4,25 @@
 
 This project implements an **8-bit Arithmetic Logic Unit (ALU)** in Verilog. It has a modular design, with separate modules for arithmetic, logic, shift operations, and control. It includes a **control unit** to emulate CPU-style operation selection.  
 
-The ALU supports:
+-The ALU supports:
 
-Arithmetic operations: add, subtract, increment, decrement
+ - Arithmetic operations: add, subtract, increment, decrement
 
-Logical operations: AND, OR, XOR, NOT
+ - Logical operations: AND, OR, XOR, NOT
 
-Shift operations: logical and arithmetic shifts
+ - Shift operations: logical and arithmetic shifts
 
-Status flags: Zero, Carry, Overflow, Negative
+ - Status flags: Zero, Carry, Overflow, Negative
 
 A testbench runs all operations and generates waveform outputs for verification.
 
-Tools used:
+-Tools used:
 
-EDA Playground – for writing and simulating Verilog code
+ - EDA Playground – for writing and simulating Verilog code
 
-Icarus Verilog – Verilog compiler and simulator
+ - Icarus Verilog – Verilog compiler and simulator
 
-GTKWave – waveform visualization
+ - GTKWave – waveform visualization
 
 The project also includes block diagrams and an opcode table for reference.
 

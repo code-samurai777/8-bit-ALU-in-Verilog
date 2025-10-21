@@ -1,30 +1,39 @@
+`timescale 1ns/1ps
 module alu_tb;
-    reg [2:0] opcode;
-    wire [7:0] result;
-    wire carry_out, zero, overflow, negative;
+    reg [7:0] A, B;
+    reg [3:0] instr;
+    wire [7:0] Result;
+    wire CarryOut, Zero, Overflow, Negative;
 
-    alu_control uut (
-        .opcode(opcode),
-        .result(result),
-        .carry_out(carry_out),
-        .zero(zero),
-        .overflow(overflow),
-        .negative(negative)
-    );
+    // instantiate control and ALU
+    wire [3:0] alu_op;
+    alu_control ctrl(.instr(instr), .alu_op(alu_op));
+    alu dut(.A(A), .B(B), .opcode(alu_op),
+            .Result(Result),
+            .CarryOut(CarryOut),
+            .Zero(Zero),
+            .Overflow(Overflow),
+            .Negative(Negative));
 
+    integer i;
     initial begin
-        // Test ADD operation
-        opcode = 3'b000; #10;
-        // Test SUB operation
-        opcode = 3'b001; #10;
-        // Test AND operation
-        opcode = 3'b100; #10;
-        // Test OR operation
-        opcode = 3'b101; #10;
-        // Test XOR operation
-        opcode = 3'b110; #10;
-        // Test NOT operation
-        opcode = 3'b111; #10;
+        $dumpfile("results/waveform.vcd");
+        $dumpvars(0, alu_tb);
+
+        // deterministic tests
+        A = 8'h0F; B = 8'h01; instr = 4'b0000; #5; // ADD
+        A = 8'h10; B = 8'h01; instr = 4'b0001; #5; // SUB
+        A = 8'hFF; B = 8'h00; instr = 4'b0100; #5; // AND
+        A = 8'hF0; B = 8'h0F; instr = 4'b0101; #5; // OR
+        A = 8'hAA; B = 8'h55; instr = 4'b0110; #5; // XOR
+        A = 8'h0F; B = 8'h00; instr = 4'b0111; #5; // NOT
+
+        // random tests
+        for(i=0;i<50;i=i+1) begin
+            A = $random; B = $random; instr = $random % 11; #2;
+        end
+
+        $display("ALU simulation complete.");
         $finish;
     end
 endmodule

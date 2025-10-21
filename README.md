@@ -35,18 +35,6 @@ This project is built to be **interview-ready** and demonstrates:
 
 ---
 
-## File Structure
-
-src/ : Design files (alu, control, operations)
-tb/ : Testbench file
-docs/ : Block diagrams and opcode tables
-results/ : Waveform dumps and screenshots
-README.md : Project description
-LICENSE : Open-source license (MIT)
-
-
----
-
 ## Design Details
 
 The ALU is implemented in **three modular components**:
@@ -54,8 +42,6 @@ The ALU is implemented in **three modular components**:
 1. **alu_operations.v** – Implements arithmetic, logical, and shift operations  
 2. **alu_control.v** – ALU Control Unit that maps opcode to ALU operation  
 3. **alu.v** – Main ALU wrapper connecting operations and flags  
-
-This separation mimics a CPU-style architecture and is a common **industry practice** in RTL design.
 
 ---
 

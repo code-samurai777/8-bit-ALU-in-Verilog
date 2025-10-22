@@ -1,0 +1,12 @@
+# 8-bit ALU Opcode Table
+
+| Opcode | Operation |
+|--------|-----------|
+| 000    | ADD       |
+| 001    | SUB       |
+| 010    | INC       |
+| 011    | DEC       |
+| 100    | AND       |
+| 101    | OR        |
+| 110    | XOR       |
+| 111    | NOT       |

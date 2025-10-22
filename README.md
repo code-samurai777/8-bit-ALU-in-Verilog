@@ -14,7 +14,6 @@ This project implements an **8-bit Arithmetic Logic Unit (ALU)** in Verilog. It 
 
  - Status flags: Zero, Carry, Overflow, Negative
 
-A testbench runs all operations and generates waveform outputs for verification.
 
 -Tools used:
 
@@ -62,7 +61,7 @@ The ALU is implemented in **three modular components**:
 ## Simulation
 
 - The **testbench (alu_tb.v)** runs all operations and flags
-- Generates **waveform file (`waveform.vcd`)** for GTKWave visualization
+- Generates **waveform file (`results/waveform.png`)** for EPWave visualization
 - Includes **pass/fail messages** in simulation console
 - Supports **EDA Playground** or **ModelSim/Icarus Verilog**
 
@@ -79,6 +78,6 @@ The ALU is implemented in **three modular components**:
 
 ## Author
 
-Sarthak Omar
-Electronics Engineering,
-HBTU Kanpur(2027)
+**Made by:** Sarthak Omar  
+**Role:** Verilog Project   
+**Tools:** EDA Playground, Icarus Verilog, EP Wave

@@ -24,7 +24,6 @@ A testbench runs all operations and generates waveform outputs for verification.
 
  - EPWave – waveform visualization
 
-The project also includes block diagrams and an opcode table for reference.
 
 ---
 
@@ -71,12 +70,12 @@ The ALU is implemented in **three modular components**:
 
 ## Waveform & Results
 
-- Waveforms can be opened in **GTKWave** to verify:
+- Waveforms can be opened in **EPWave** to verify:
   - Operations
   - Status flag behavior
   - Input/output relationship
 
-- Screenshots of the waveform can be stored in `results/waveform.png`  
+- ![ALU Waveform](results/waveform.png)
 
 ## Author
 

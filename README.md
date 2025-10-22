@@ -22,7 +22,7 @@ A testbench runs all operations and generates waveform outputs for verification.
 
  - Icarus Verilog – Verilog compiler and simulator
 
- - GTKWave – waveform visualization
+ - EPWave – waveform visualization
 
 The project also includes block diagrams and an opcode table for reference.
 
@@ -76,7 +76,7 @@ The ALU is implemented in **three modular components**:
   - Status flag behavior
   - Input/output relationship
 
-- Screenshots of the waveform can be stored in `results/simulation_screenshot.png`  
+- Screenshots of the waveform can be stored in `results/waveform.png`  
 
 ## Author
 

@@ -17,16 +17,21 @@ module alu_tb;
 
     integer i;
     initial begin
-        $dumpfile("results/waveform.vcd");
-        $dumpvars(0, alu_tb);
+        $dumpfile("waveform.vcd");
+$dumpvars(0, alu_tb);
 
-        // deterministic tests
-        A = 8'h0F; B = 8'h01; instr = 4'b0000; #5; // ADD
-        A = 8'h10; B = 8'h01; instr = 4'b0001; #5; // SUB
-        A = 8'hFF; B = 8'h00; instr = 4'b0100; #5; // AND
-        A = 8'hF0; B = 8'h0F; instr = 4'b0101; #5; // OR
-        A = 8'hAA; B = 8'h55; instr = 4'b0110; #5; // XOR
-        A = 8'h0F; B = 8'h00; instr = 4'b0111; #5; // NOT
+         // deterministic tests
+A = 8'h0F; B = 8'h01; instr = 4'b0000; #5; // ADD
+A = 8'h10; B = 8'h01; instr = 4'b0001; #5; // SUB
+A = 8'hFF; B = 8'h00; instr = 4'b0100; #5; // AND
+A = 8'hF0; B = 8'h0F; instr = 4'b0101; #5; // OR
+A = 8'hAA; B = 8'h55; instr = 4'b0110; #5; // XOR
+A = 8'h0F; B = 8'h00; instr = 4'b0111; #5; // NOT
+
+A = 8'h81; B = 8'h00; instr = 4'b1000; #5; // LSL
+A = 8'h81; B = 8'h00; instr = 4'b1001; #5; // LSR
+A = 8'h81; B = 8'h00; instr = 4'b1010; #5; // ASR
+A = 8'h22; B = 8'h22; instr = 4'b1111; #5; // CMP
 
         // random tests
         for(i=0;i<50;i=i+1) begin

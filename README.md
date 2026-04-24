@@ -74,7 +74,7 @@ The ALU is implemented in **three modular components**:
   - Status flag behavior
   - Input/output relationship
 
-- ![ALU Waveform](results/waveform.png)
+- ![ALU Waveform](results/result_waveform.png)
 
 ## Author
 

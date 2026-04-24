@@ -23,28 +23,26 @@ This project implements an **8-bit Arithmetic Logic Unit (ALU)** in Verilog. It 
 
  - EPWave – waveform visualization
 
+-ALU Block diagram:
+
+- ![ALU Block Diagram](docs/alu_block_diagram.png)
+
 
 ---
 
 ## Features
 
 ### Supported Operations
-| Opcode | Operation | Description |
-|--------|-----------|-------------|
-| 000 | ADD | Adds A + B |
-| 001 | SUB | Subtracts A - B |
-| 010 | INC | Increment A by 1 |
-| 011 | DEC | Decrement A by 1 |
-| 100 | AND | Bitwise AND A & B |
-| 101 | OR | Bitwise OR A \| B |
-| 110 | XOR | Bitwise XOR A ^ B |
-| 111 | NOT | Bitwise NOT ~A |
+
+- ![ALU Opcode Table](docs/ALU_Truth-table.png)
+
 
 ### Status Flags
 - **Zero (Z):** Set if the result is zero  
 - **CarryOut (C):** Set if arithmetic carry/borrow occurs  
 - **Overflow (V):** Set if signed overflow occurs  
 - **Negative (N):** Set if the result is negative (MSB=1)
+
 
 ---
 
@@ -61,7 +59,7 @@ The ALU is implemented in **three modular components**:
 ## Simulation
 
 - The **testbench (alu_tb.v)** runs all operations and flags
-- Generates **waveform file (`results/waveform.png`)** for EPWave visualization
+- Generates **waveform file (`results/result_waveform.png`)** for EPWave visualization
 - Includes **pass/fail messages** in simulation console
 - Supports **EDA Playground** or **ModelSim/Icarus Verilog**
 

@@ -69,6 +69,8 @@ The ALU is implemented in **three modular components**:
 
 ## Waveform & Results
 
+- The resultant waveform is calculated upto the timespan of 50ns.
+
 - Waveforms can be opened in **EPWave** to verify:
   - Operations
   - Status flag behavior
